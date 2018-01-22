@@ -11,6 +11,6 @@ import org.apache.pdfbox.text.PDFTextStripper;
 public class FileService {
 	public List<String> getLinesFromPdf(File file) throws IOException {
 		PDDocument doc = PDDocument.load(file);
-	    return Arrays.asList(new PDFTextStripper().getText(doc).split("\n"));
+	    return Arrays.asList(new PDFTextStripper().getText(doc).split(System.getProperty("line.separator")));
 	}
 }

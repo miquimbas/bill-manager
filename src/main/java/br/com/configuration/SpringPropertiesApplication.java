@@ -26,7 +26,7 @@ public class SpringPropertiesApplication extends SpringBootServletInitializer {
 		SpringApplication.run(SpringPropertiesApplication.class, args);
 		
 		List<String> lines = new FileService().getLinesFromPdf(new File(FILE_PATH));
-		Bill bill = getBill(new Santander(), lines);
+		Bill bill = buildBill(new Santander(), lines);
 		saveBill(bill);
 		
 		for (int i = 0; i < lines.size(); i++) {
@@ -39,7 +39,7 @@ public class SpringPropertiesApplication extends SpringBootServletInitializer {
 		
 	}
 
-	private static Bill getBill(Bank bank, List<String> lines) {
+	private static Bill buildBill(Bank bank, List<String> lines) {
 		return bank.buildBill(lines);
 	}
 
