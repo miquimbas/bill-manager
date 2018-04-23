@@ -1,12 +1,14 @@
 package br.com.model;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 public class Card {
 	
 	private String ownerName;
 	private String number;
-	private List<Shopping> shoppingList;
+	private List<Purchase> purchaseList;
 	
 	public String getOwnerName() {
 		return ownerName;
@@ -20,10 +22,10 @@ public class Card {
 	public void setNumber(String number) {
 		this.number = number;
 	}
-	public List<Shopping> getShoppingList() {
-		return shoppingList;
+	public List<Purchase> getPurchaseList() {
+		return purchaseList;
 	}
-	public void setShoppingList(List<Shopping> shoppingList) {
-		this.shoppingList = shoppingList;
+	public void setPurchaseList(List<Purchase> purchaseList) {
+		this.purchaseList = purchaseList;
 	}
 }

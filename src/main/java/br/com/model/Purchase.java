@@ -3,10 +3,10 @@ package br.com.model;
 import java.math.BigDecimal;
 import java.util.Date;
 
-public class Shopping {
+public class Purchase {
 	
 	private Date date;
-	private String companyName;
+	private Company company;
 	private BigDecimal value;
 	
 	public Date getDate() {
@@ -15,11 +15,11 @@ public class Shopping {
 	public void setDate(Date date) {
 		this.date = date;
 	}
-	public String getCompanyName() {
-		return companyName;
+	public Company getCompany() {
+		return company;
 	}
-	public void setCompanyName(String companyName) {
-		this.companyName = companyName;
+	public void setCompany(Company company) {
+		this.company= company;
 	}
 	public BigDecimal getValue() {
 		return value;
